@@ -1,8 +1,8 @@
 import requests
 from bs4 import BeautifulSoup
 
-
-response = requests.get('https://samplearticlescraping.web.app')
+website_url = 'https://samplearticlescraping.web.app'
+response = requests.get(website_url)
 
 soup = BeautifulSoup(response.text, 'html.parser')
 article_contents = soup.get_text()
